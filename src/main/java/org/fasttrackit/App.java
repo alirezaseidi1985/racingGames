@@ -12,12 +12,15 @@ public class App {
         engine.capacity = 1500;
         engine.expiryDate = LocalDateTime.now().plusYears(10);
 
-        Car Car = new Car(engine);
+        Car car = new Car(engine);
+        car.setColor("white");
+        car.setName("Dacia");
         Car.name = "Dacia";
         Car.color = "white";
         Car.doorCount = 4;
         Car.mileage = 7.5;
         Car.running = true;
+        system.out.printIn(car.getName());
 
        double carTraveledDistance = Car.accelerate(100, 2);
 
