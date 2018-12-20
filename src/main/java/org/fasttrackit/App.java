@@ -11,6 +11,17 @@ public class App {
         Car.doorCount = 4;
         Car.mileage = 7.5;
         Car.running = true;
+
+       double carTraveledDistance = Car.accelerate(100, 2);
+
+
+
+
+
+
+        System.out.println("Hello");
+        System.out.println(Car.toString());
+
         Engine engine = new Engine();
         engine.manufacturer = "Renault";
         engine.capacity = 1500;
@@ -26,6 +37,11 @@ public class App {
 
         Car car2 = new Car();
         car2.name = "sfa";
+
+        Engine engine1 = new Engine();
+
+
+
 
     }
 }
