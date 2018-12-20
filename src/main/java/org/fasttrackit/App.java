@@ -1,11 +1,18 @@
 package org.fasttrackit;
 
+import java.time.LocalDateTime;
+
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) {
-        Car Car = new Car();
+        Engine engine = new Engine();
+        engine.manufacturer = "Renault";
+        engine.capacity = 1500;
+        engine.expiryDate = LocalDateTime.now().plusYears(10);
+
+        Car Car = new Car(engine);
         Car.name = "Dacia";
         Car.color = "white";
         Car.doorCount = 4;
@@ -22,9 +29,7 @@ public class App {
         System.out.println("Hello");
         System.out.println(Car.toString());
 
-        Engine engine = new Engine();
-        engine.manufacturer = "Renault";
-        engine.capacity = 1500;
+
 
         Car.engine = engine;
 
@@ -35,7 +40,7 @@ public class App {
 
         Car.engine = new Engine();
 
-        Car car2 = new Car();
+        Car car2 = new Car(engine);
         car2.name = "sfa";
 
         Engine engine1 = new Engine();

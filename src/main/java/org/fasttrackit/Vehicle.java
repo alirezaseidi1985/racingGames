@@ -5,7 +5,7 @@ public class Vehicle {
     String name;
     String color;
     double mileage;
-
+boolean running;
 
 
     public double accelerate(double speed, double durationInHours) {
