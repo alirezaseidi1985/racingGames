@@ -15,14 +15,13 @@ public class App {
         Car car = new Car(engine);
         car.setColor("white");
         car.setName("Dacia");
-        Car.name = "Dacia";
-        Car.color = "white";
-        Car.doorCount = 4;
-        Car.mileage = 7.5;
-        Car.running = true;
-        system.out.printIn(car.getName());
+        car.name = "Dacia";
+        car.doorCount = 4;
+       car.setMileage(7.5);
+        car.running = true;
+        System.out.println(car.getName());
 
-       double carTraveledDistance = Car.accelerate(100, 2);
+       double carTraveledDistance = car.accelerate(100, 2);
 
 
 
@@ -30,21 +29,20 @@ public class App {
 
 
         System.out.println("Hello");
-        System.out.println(Car.toString());
+        System.out.println();
 
 
 
-        Car.engine = engine;
+        car.engine = engine;
 
-        Car.engine.manufacturer = "BMW";
+        car.engine.manufacturer = "BMW";
 
         engine = null;
 
 
-        Car.engine = new Engine();
+        car.engine = new Engine();
 
         Car car2 = new Car(engine);
-        car2.name = "sfa";
 
         Engine engine1 = new Engine();
 
