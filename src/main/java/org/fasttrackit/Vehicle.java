@@ -42,16 +42,26 @@ public class Vehicle {
         this.running = running;
     }
 
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", mileage=" + mileage +
+                ", running=" + running +
+                '}';
+    }
+
     public double accelerate(double speed, double durationInHours) {
         System.out.println(name + "accelerated with" + speed + "km/h for" + durationInHours + "hours");
-
-
         double traveledDistance = speed * durationInHours;
         System.out.println("Traveled distance: " + traveledDistance);
         return traveledDistance;
+    }
+
 
         public double accelerate(double speed) {
-            return accelerate(speed, durationInHours:1);
+            return accelerate(speed,1);
 
         }
 
@@ -66,4 +76,4 @@ public class Vehicle {
     }
 
 
-}
+

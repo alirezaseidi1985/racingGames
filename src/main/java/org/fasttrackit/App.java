@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import org.fasttrackit.cheater.UFO;
+
 import java.time.LocalDateTime;
 
 /**
@@ -20,6 +22,7 @@ public class App {
         car.setMileage(7.5);
         car.running = true;
         System.out.println(car.getName());
+        System.out.println(car);
 
         double carTraveledDistance = car.accelerate(100, 2);
 
@@ -61,6 +64,9 @@ public class App {
 
         vehicle1.accelerate (34.12);
         vehicle2.accelerate(130, 0.8);
+
+        new UFO().accelerate(130, 0.8);
+
 
 
 
