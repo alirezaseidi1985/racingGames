@@ -65,9 +65,14 @@ public class App {
         vehicle1.accelerate (34.12);
         vehicle2.accelerate(130, 0.8);
 
+
         new UFO().accelerate(130, 0.8);
+        // polymorphism (an obiect can take multiple forms)
 
+        Vehicle ufo = new UFO();
+        ufo.accelerate(200, 2);
 
+        ((UFO) ufo).concealcheating();
 
 
     }

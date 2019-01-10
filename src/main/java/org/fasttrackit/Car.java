@@ -5,7 +5,12 @@ public class Car extends AutuVehicle {
 int doorCount;
 
 
+    public Car() {
+    }
+
     public Car(Engine engine) {
         super(engine);
+
+
     }
 }
