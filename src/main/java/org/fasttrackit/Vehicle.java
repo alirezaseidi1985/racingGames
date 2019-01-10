@@ -63,6 +63,9 @@ public class Vehicle {
         public double accelerate(double speed) {
             return accelerate(speed,1);
 
+
+            }
+
         }
 
 

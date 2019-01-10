@@ -11,6 +11,12 @@ public class UFO extends Vehicle {
         System.out.println("Traveled distance: " + traveledDistance);
         return traveledDistance;
     }
-    public void concealcheating();
-    sout
+    public void concealcheating(){
+        System.out.println();
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
