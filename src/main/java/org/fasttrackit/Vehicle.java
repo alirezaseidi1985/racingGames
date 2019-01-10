@@ -9,7 +9,6 @@ public class Vehicle {
     boolean running;
 
 
-
     public String getName() {
         return name;
     }
@@ -60,23 +59,19 @@ public class Vehicle {
     }
 
 
-        public double accelerate(double speed) {
-            return accelerate(speed,1);
-
-
-            }
-
-        }
-
-
-
-
-
-
-
+    public double accelerate(double speed) {
+        return accelerate(speed, 1);
 
 
     }
+
+    protected Vehicle clone() {
+        Vehicle vehicle = new Vehicle();
+        // copy properties from current object or simply call this.clone();
+        return vehicle;
+    }
+
+}
 
 
 
