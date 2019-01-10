@@ -11,4 +11,13 @@ public class AutuVehicle extends Vehicle {
     public AutuVehicle(Engine engine) {
         this.engine = engine;
     }
+
+    public AutuVehicle() {
+//        this.engine = new Engine();
+        this(new Engine());
+    }
 }
+
+
+
+

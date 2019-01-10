@@ -17,20 +17,15 @@ public class App {
         car.setName("Dacia");
         car.name = "Dacia";
         car.doorCount = 4;
-       car.setMileage(7.5);
+        car.setMileage(7.5);
         car.running = true;
         System.out.println(car.getName());
 
-       double carTraveledDistance = car.accelerate(100, 2);
-
-
-
-
+        double carTraveledDistance = car.accelerate(100, 2);
 
 
         System.out.println("Hello");
         System.out.println();
-
 
 
         car.engine = engine;
@@ -46,13 +41,26 @@ public class App {
 
         Engine engine1 = new Engine();
 
-Vehicle vehicle1 = new Vehicle();
-vehicle1. = 1;
+        Vehicle vehicle1 = new Vehicle();
+        vehicle1.vehicleCount = 1;
 
-Vehicle vehicle2 = new Vehicle();
-vehicle2.vehicleCount = 2;
+        Vehicle vehicle2 = new Vehicle();
+        vehicle2.vehicleCount = 2;
 
-Vehicle.vehicle3 = new vehicle
+        Vehicle.vehicleCount = 3;
+
+        System.out.println("Value from vehicle 1: " + vehicle1.vehicleCount);
+        System.out.println("Value from vehicle 2: " + vehicle2.vehicleCount);
+        System.out.println("Value from Vehicle class: " + Vehicle.vehicleCount);
+
+
+        new AutuVehicle();
+
+        new AutuVehicle(new Engine());
+
+
+        vehicle1.accelerate (34.12);
+        vehicle2.accelerate(130, 0.8);
 
 
 
