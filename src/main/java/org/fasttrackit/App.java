@@ -46,6 +46,13 @@ public class App {
 
         Engine engine1 = new Engine();
 
+Vehicle vehicle1 = new Vehicle();
+vehicle1. = 1;
+
+Vehicle vehicle2 = new Vehicle();
+vehicle2.vehicleCount = 2;
+
+Vehicle.vehicle3 = new vehicle
 
 
 

@@ -5,7 +5,7 @@ public class Vehicle {
     private String name;
     private String color;
     private double mileage;
-boolean running;
+    boolean running;
 
 
     public String getName() {
@@ -47,15 +47,16 @@ boolean running;
         double traveledDistance = speed * durationInHours;
         System.out.println("Traveled distance: " + traveledDistance);
         return traveledDistance;
+        public static int vehiclecount;
+
+
+
 
 
 
 
 
     }
-
-
-
 
 
 }
