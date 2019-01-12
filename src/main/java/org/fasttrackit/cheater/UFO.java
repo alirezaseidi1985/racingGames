@@ -21,5 +21,7 @@ public class UFO extends Vehicle {
     @Override
     public UFO clone() {
         return new UFO();
+
+
     }
 }
