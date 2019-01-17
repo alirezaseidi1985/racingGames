@@ -7,6 +7,8 @@ public class Vehicle {
     private String color;
     private double mileage;
     boolean running;
+    private double fuellevel;
+    private double totalTraveledDistance;
 
 
     public String getName() {
@@ -55,14 +57,39 @@ public class Vehicle {
         System.out.println(name + "accelerated with" + speed + "km/h for" + durationInHours + "hours");
         double traveledDistance = speed * durationInHours;
         System.out.println("Traveled distance: " + traveledDistance);
+
+        //same as: totalTravelDistance = totalTraveledDidtance = traveledDistance
+        totalTraveledDistance += traveledDistance;
+        System.out.println("total Travel distance: " + totalTraveledDistance);
+        double spentFuel = traveledDistance * mileage /;
+        fuellevel -= spentFuel;
+        System.out.println("Remaining fuel: " + fuellevel);
+
         return traveledDistance;
     }
+
 
 
     public double accelerate(double speed) {
         return accelerate(speed, 1);
 
 
+    }
+
+    public double getFuellevel() {
+        return fuellevel;
+    }
+
+    public void setFuellevel(double fuellevel) {
+        this.fuellevel = fuellevel;
+    }
+
+    public double getTotalTraveledDistance() {
+        return totalTraveledDistance;
+    }
+
+    public void setTotalTraveledDistance(double totalTraveledDistance) {
+        this.totalTraveledDistance = totalTraveledDistance;
     }
 
     protected Vehicle clone() {
