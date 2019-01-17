@@ -1,14 +1,33 @@
 package org.fasttrackit;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
     private  Track[] tracks = new Track[10];
-
-    Vehicle firstCompetitor;
-    Vehicle secoundCompetitor;
+private List<Vehicle> competitors = new ArrayList<>();
 
 public void start() {
+
+    addCompetitors(3);
+ddisplayCompetitors();
+
     addTracks();
     displayAvailableTracks();
+
+}
+private void addCompetitors(int competitorCount) {
+    for (int i = 0; i < competitorCount; i++){
+        Vehicle vehicle = new Vehicle();
+        //vehicle properties will be populated when we learn to get user's
+        competitors.add(vehicle);
+    }
+}
+private void ddisplayCompetitors(){
+    System.out.println("Welcome! Today's competitors are:");
+    for (int i = 0; i < competitors.size(); i++){
+        System.out.println(competitors.get(i).getName());
+    }
 }
     public void addTracks () {
 
