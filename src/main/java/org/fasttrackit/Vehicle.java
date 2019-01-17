@@ -61,7 +61,7 @@ public class Vehicle {
         //same as: totalTravelDistance = totalTraveledDidtance = traveledDistance
         totalTraveledDistance += traveledDistance;
         System.out.println("total Travel distance: " + totalTraveledDistance);
-        double spentFuel = traveledDistance * mileage /;
+        double spentFuel = traveledDistance * mileage ;
         fuellevel -= spentFuel;
         System.out.println("Remaining fuel: " + fuellevel);
 
