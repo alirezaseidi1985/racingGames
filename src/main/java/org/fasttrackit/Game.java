@@ -1,15 +1,18 @@
 package org.fasttrackit;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
     private  Track[] tracks = new Track[10];
 private List<Vehicle> competitors = new ArrayList<>();
 
-public void start() {
+public void start() throws Exception {
 
-    addCompetitors(3);
+    addCompetitors(getCompetitorCountFromUser());
 ddisplayCompetitors();
 
     addTracks();
@@ -19,10 +22,44 @@ ddisplayCompetitors();
 private void addCompetitors(int competitorCount) {
     for (int i = 0; i < competitorCount; i++){
         Vehicle vehicle = new Vehicle();
+        vehicle.setName(getVehicleNameFromUser());
+        vehicle.setMileage(
+                ThreadLocalRandom.current().nextDouble(5, 15)
+        );
+        System.out.println("Vehicle mileage: " + vehicle.getMileage());
+
+
         //vehicle properties will be populated when we learn to get user's
         competitors.add(vehicle);
     }
 }
+private String getVehicleNameFromUser() {
+    System.out.println("Please enter a vehicle name:");
+    Scanner scanner = new Scanner(System.in);
+    String name = scanner.nextLine();
+    System.out.println("Your vehicle name is:" + name);
+    return name;
+
+}
+
+private int getCompetitorCountFromUser() throws Exception {
+    System.out.println("Please enter number of players:");
+    Scanner scanner = new Scanner(System.in);
+    try {
+
+    int nimberOfPlayers = scanner.nextInt();
+    System.out.println("Selected number of players:" + nimberOfPlayers);
+    return nimberOfPlayers;
+    } catch (InputMismatchException exception) {
+        throw new Exception("Integer required.");
+
+
+    }
+
+
+}
+
+
 private void ddisplayCompetitors(){
     System.out.println("Welcome! Today's competitors are:");
     for (int i = 0; i < competitors.size(); i++){
