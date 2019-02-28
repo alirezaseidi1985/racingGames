@@ -43,7 +43,7 @@ while (noWinnerYet && competitorsWithoutFuel < competitors.size()) {
             TopWinner topWinner = new TopWinner();
             topWinner.getName(vehicle.getName());
             topWinner.setWonRaces(1);
-            
+
             topWinnerService.createTopWinner(topWinner);
 
 
@@ -67,6 +67,7 @@ private void addCompetitors(int competitorCount) {
     for (int i = 0; i < competitorCount; i++){
         Vehicle vehicle = new Vehicle();
         vehicle.setName(getVehicleNameFromUser());
+        vehicle.setFuellevel(100);
         vehicle.setMileage(
                 ThreadLocalRandom.current().nextDouble(5, 15)
         );
@@ -138,8 +139,8 @@ private void ddisplayCompetitors(){
        for (int i =0; i < tracks.length; i++) {
            //if object if different than null
            if (tracks[i] != null) {
+               System.out.println(tracks[i].getName());
            }
-           System.out.println(tracks[i].getName());
      }
        // enhanced for / "for-each"
        for (Track track : tracks) {
